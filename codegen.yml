@@ -1,18 +1,12 @@
 overwrite: true
-schema: "https://intent-shad-91.hasura.app/v1/graphql"
-documents: "./src/queries/**/**.gql"
+schema: 'https://fakeql.com/graphql/2aaf00462236e8280f4c3beb197aae54'
+documents: 'src/**/*.graphql'
 generates:
-  src/generated/graphql.ts:
-    plugins:
-      - "typescript"
-      - "typescript-operations"
-      - "typescript-react-query"
-    config:
-      fetcher:
-        endpoint: "https://intent-shad-91.hasura.app/v1/graphql"
-  ./graphql.schema.json:
-    plugins:
-      - "introspection"
-
-
-      
+    src/generated/index.ts:
+        plugins:
+            - typescript
+            - typescript-operations
+            - typescript-react-query
+        config:
+            fetcher:
+                endpoint: 'https://fakeql.com/graphql/2aaf00462236e8280f4c3beb197aae54'
